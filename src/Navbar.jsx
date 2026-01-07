@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../public/logo.png";
+
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -10,7 +10,7 @@ const Navbar = () => {
         
         {/* Brand (LEFT) */}
         <div className="flex items-center gap-2">
-          <img src={logo} alt="GrandWash logo" className="w-10 h-10" />
+          <img src="/logo.png" alt="GrandWash logo" className="w-10 h-10" />
           <h2 className="text-2xl font-medium">GrandWash</h2>
         </div>
 
