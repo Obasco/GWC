@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+:root {
+  --archivo: "Archivo", sans-serif;
+  --bebas: "Bebas Neue", sans-serif;
+  --nav: "Poppins", sans-serif;
+  --inter: "Inter", sans-serif;
+  --poppins: "Poppins", sans-serif;
+}
+
+.poppins {
+  font-family: var(--poppins);
+}
+.archivo {
+  font-family: var(--archivo);
+}
+
+.inter{
+  font-family: var(--inter);
+}
+.bebas {
+  font-family: var(--bebas);
+  letter-spacing: 0.15em;
+}
+
+.nav-font {
+  font-family: var(--nav);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .nav-link {
+    @apply relative transition-colors duration-300;
+    font-family: var(--nav);
+    font-weight: 500;
+  }
+
+  .nav-link::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+}
