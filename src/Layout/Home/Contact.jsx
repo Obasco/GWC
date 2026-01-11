@@ -29,7 +29,7 @@ export function Contact() {
                   <div>
                     <div className="font-semibold mb-1">Location</div>
                     <div className="text-gray-300">
-                      828 Eastern Ave, Toronto, ON M4L 1A1
+                      780 Unit 4. Markham Rd, Scarborough, ON M1H 2A9
                     </div>
                   </div>
                 </div>
@@ -39,8 +39,8 @@ export function Contact() {
                   <div>
                     <div className="font-semibold mb-1">Phone</div>
                     <div className="text-gray-300">
-                      <a href="tel:+14164699655" className="hover:underline">
-                        (416) 469‑9655
+                      <a href="tel:+14167578200" className="hover:underline">
+                        (416) 757‑8200
                       </a>
                     </div>
                   </div>
@@ -74,7 +74,7 @@ export function Contact() {
             <div className="w-full h-64 rounded-2xl overflow-hidden border border-gray-200">
               <iframe
                 title="Grand Car Wash Toronto Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.021530043128!2d-79.34922268450336!3d43.664993579121575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34b8a915c69f%3A0xe74634b1c9a2e0dc!2sGrand%20Car%20Wash%20Toronto!5e0!3m2!1sen!2sca!4v1696491367456!5m2!1sen!2sca"
+                src="google.com/maps/place/4+Markham+Rd+%23780,+Scarborough,+ON,+Canada/data=!4m2!3m1!1s0x89d4d03f880d4a63:0x75fc19d7e3e02c61?sa=X&ved=1t:242&ictx=111"
                 className="w-full h-full"
                 allowFullScreen
                 loading="lazy"

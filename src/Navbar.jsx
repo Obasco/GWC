@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -15,16 +15,26 @@ const Navbar = () => {
         </div>
 
         {/* Nav Links (CENTER - Desktop) */}
-        <ul className="hidden md:flex gap-8 text-gray-600 font-medium">
-          {["About", "Services", "Gallery", "Contact"].map((item) => (
-            <li
-              key={item}
-              className="relative cursor-pointer after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full"
-            >
-              {item}
-            </li>
-          ))}
-        </ul>
+  
+
+<ul className="hidden md:flex gap-8 text-gray-600 font-medium">
+  {[
+    { Name: "About", path: "/about" },
+    { Name: "Services", path: "/service" },
+    { Name: "Gallery", path: "/gallery" },
+    { Name: "Contact", path: "/contact" },
+  ].map((item) => (
+    <li
+      key={item.path}
+      className="relative cursor-pointer after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full"
+    >
+      <Link to={item.path}>
+        {item.Name}
+      </Link>
+    </li>
+  ))}
+</ul>
+
 
         {/* CTA Button (RIGHT - Desktop) */}
         <div className="hidden md:block">

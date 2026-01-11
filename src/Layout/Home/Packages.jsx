@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 const packages = [
   {
     name: "Bronze",
-    price: "$59",
+    price: "$59 - $69",
     description: "Complete interior refresh & exterior hand wash",
     features: [
       "Vacuuming and air cleaning",
@@ -14,20 +14,8 @@ const packages = [
     popular: false
   },
   {
-    name: "Silver",
-    price: "$89",
-    description: "Standard interior & premium exterior detailing",
-    features: [
-      "Interior detailing of consoles, doors, dashboard",
-      "Leather & vinyl enhancement",
-      "Premium hand wash",
-      "Crystal-clear window cleaning"
-    ],
-    popular: true
-  },
-  {
     name: "Gold",
-    price: "$119",
+    price: "$119 - $129",
     description: "Deep cleaning with meticulous interior & exterior care",
     features: [
       "Deep salt & stain removal",
@@ -35,11 +23,11 @@ const packages = [
       "Signature exterior finish",
       "Premium waxing for shine"
     ],
-    popular: false
+    popular: true
   },
   {
     name: "Platinum",
-    price: "$149",
+    price: "$149 - $179",
     description: "Gold services plus long-lasting protection & full upholstery shampoo",
     features: [
       "Everything in Gold",
@@ -51,7 +39,7 @@ const packages = [
   },
   {
     name: "Showroom Detail",
-    price: "$179",
+    price: "$179 - $189",
     description: "Elite full-service detailing inside, outside & under hood",
     features: [
       "Full interior revival including roof & seatbelts",
@@ -63,7 +51,7 @@ const packages = [
   },
   {
     name: "Diamond",
-    price: "$299",
+    price: "$299 - $319",
     description: "Ultimate package with paint correction & showroom-level finish",
     features: [
       "Stage 1 paint correction",
@@ -71,7 +59,7 @@ const packages = [
       "Meticulous full-service detailing",
       "Ultimate showroom finish"
     ],
-    popular: false
+    exclusive: true
   }
 ];
 
@@ -98,7 +86,7 @@ export default function Packages() {
             <div
               key={index}
               className={`relative p-8 rounded-2xl ${
-                pkg.popular
+                pkg.popular || pkg.exclusive
                   ? "bg-black text-white shadow-2xl scale-105"
                   : "bg-white text-gray-900 border border-gray-200"
               }`}
@@ -109,9 +97,17 @@ export default function Packages() {
                 </div>
               )}
 
+
+                 {pkg.exclusive && (
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-white text-black px-4 py-1 rounded-full text-sm">
+                  Exclusive
+                </div>
+              )}
+
+
               <div className="mb-8">
                 <h3 className="text-2xl mb-2">{pkg.name}</h3>
-                <p className={pkg.popular ? "text-gray-300" : "text-gray-600"}>
+                <p className={pkg.popular || pkg.exclusive ? "text-gray-300" : "text-gray-600"}>
                   {pkg.description}
                 </p>
               </div>
@@ -129,9 +125,9 @@ export default function Packages() {
                 {pkg.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start gap-3">
                     <Check className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
-                      pkg.popular ? "text-gray-300" : "text-black"
+                      pkg.popular || pkg.exclusive ? "text-gray-300" : "text-black"
                     }`} />
-                    <span className={pkg.popular ? "text-gray-100" : "text-gray-700"}>
+                    <span className={pkg.popular || pkg.exclusive ? "text-gray-100" : "text-gray-700"}>
                       {feature}
                     </span>
                   </li>
@@ -140,7 +136,7 @@ export default function Packages() {
 
               <button
                 className={`w-full py-3 rounded-full transition-colors ${
-                  pkg.popular
+                  pkg.popular || pkg.exclusive
                     ? "bg-white text-black hover:bg-gray-200"
                     : "bg-black text-white hover:bg-gray-800"
                 }`}
