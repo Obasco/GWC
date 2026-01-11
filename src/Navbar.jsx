@@ -9,8 +9,10 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Brand (LEFT) */}
         <div className="flex items-center gap-2">
+         <Link className="flex items-center gap-2" to={"/"}>
           <img src="/logo.png" alt="GrandWash logo" className="w-10 h-10" />
           <h2 className="text-2xl font-medium">GrandWash</h2>
+         </Link>
         </div>
 
         {/* Nav Links (CENTER - Desktop) */}
