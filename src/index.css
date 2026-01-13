@@ -45,3 +45,13 @@
     @apply w-full;
   }
 }
+
+.line{
+  height: 4px;
+  width: 90px;
+  background-color: #000;
+  display: block;
+  margin-top: 8px;
+  margin-left: 32.5rem  ;
+  margin-bottom: 4rem;
+}
