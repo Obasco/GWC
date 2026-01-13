@@ -1,6 +1,7 @@
 
 import { Award, Users, Clock, ThumbsUp } from "lucide-react";
 import car2 from "../../assets/car2.jpg";
+import { Link } from "react-router-dom";
 
 const features = [
   {
@@ -44,7 +45,7 @@ export function AboutH() {
 
 
             <button className="bg-black text-white px-4 py-3 rounded-lg ">
-              Learn More 
+              <Link to="/about">Learn More</Link>
             </button>
           </div>
           <div>

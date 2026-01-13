@@ -3,7 +3,11 @@ import Masonry from "../component/Masonry";
 import Navbar from "../Navbar";
 import Footer from "./Home/Footer";
 
+
 const Gallery = () => {
+
+
+  
   const images = [
     {
       id: 1,
@@ -137,7 +141,7 @@ const Gallery = () => {
         <Navbar className="mb-40" />
 
         <h2 className="text-4xl font-semibold text-center mb-12 mt-8">Gallery
-         <span className="line"></span>
+         <span className="block h-1 w-24 bg-black mx-auto mt-2 mb-16"></span>
         </h2>
 
         <Masonry items={images} className="mt-19" />

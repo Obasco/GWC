@@ -1,6 +1,7 @@
 import React from "react";
 import car from "../../assets/car.png";
 import { CardSim, Bubbles, CarTaxiFront, Snowflake } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -41,7 +42,7 @@ const Hero = () => {
             </button>
 
             <button className="bg-white text-black border-2 border-black rounded-3xl px-7 py-3 shadow-md hover:shadow-lg hover:scale-[1.02] transition">
-              More About Us
+              <Link to="/service">Explore Services</Link>
             </button>
           </div>
         </div>
