@@ -141,7 +141,7 @@ export default function Packages() {
                     : "bg-black text-white hover:bg-gray-800"
                 }`}
               >
-                Select Package
+              <a href="https://orbisx.ca/app/booknow/VSS4D">  Select Package</a>
               </button>
             </div>
           ))}

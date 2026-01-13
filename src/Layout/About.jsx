@@ -120,7 +120,7 @@ const About = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="relative bg-gradient-to-b from-white to-gray-100 py-32 overflow-hidden">
+      <section className="relative bg-linear-to-b from-white to-gray-100 py-32 overflow-hidden">
         <div className="absolute top-10 left-10 w-72 h-72 bg-black blur-3xl opacity-[0.04]" />
         <div className="absolute bottom-10 right-10 w-72 h-72 bg-black blur-3xl opacity-[0.04]" />
 
@@ -135,7 +135,7 @@ const About = () => {
 
             <h2 className="text-5xl md:text-6xl font-bold text-black mb-6">
               What Our{" "}
-              <span className="bg-gradient-to-r from-black to-gray-600 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-black to-gray-600 bg-clip-text text-transparent">
                 Customers Say
               </span>
             </h2>
@@ -153,7 +153,7 @@ const About = () => {
                 key={index}
                 className="group relative bg-white p-8 rounded-2xl border border-black/10 shadow-sm hover:shadow-xl transition-all duration-500"
               >
-                <div className="absolute inset-0 bg-black/[0.03] opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
+                <div className="absolute inset-0 bg-black/3opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
 
                 <div className="relative z-10">
                   <div className="flex gap-1 mb-4">

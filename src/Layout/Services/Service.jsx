@@ -163,7 +163,9 @@ export default function service() {
                     <div className="text-sm text-gray-500">{service.time}</div>
                   </div>
                   <button className="bg-black text-white px-8 py-3 tracking-wide hover:bg-gray-800 transition-colors">
-                    BOOK NOW
+                   <a href="https://orbisx.ca/app/booknow/VSS4D">
+                   BOOK NOW
+                   </a>
                   </button>
                 </div>
               </div>
