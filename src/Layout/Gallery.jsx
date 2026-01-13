@@ -148,33 +148,9 @@ const Gallery = () => {
         <br />
         <br />
       </section>
-      <br /> <br /> <br />
-      <br /> <br /> <br />
-      <br /> <br /> <br />
-      <br /> <br /> <br />
-      <br /> <br /> <br />
-      <br /> <br /> <br />
-      <br /> <br /> <br />
-      <br /> <br /> <br />
-      <br /> <br /> <br />
-      <br /> <br /> <br />
-      <br /> <br /> <br />
-      <br /> <br /> <br />
-      <br /> <br /> <br />
-      <br /> <br /> <br />
-      <br /> <br /> <br />
-      <br /> <br /> <br />
-      <br /> <br /> <br />
-      <br /> <br /> <br />
-      <br /> <br /> <br />
-      <br /> <br /> <br />
-      <br /> <br /> <br />
-      <br /> <br /> <br />
-      <br /> <br /> <br />
-      <br /> <br /> <br />
-      <br /> <br /> <br /> 
-      <br /> <br /> <br /> 
-      <br /> <br /> <br /> 
+      
+  
+
       
       <Footer />
       {/* <Footer  /> */}
