@@ -133,16 +133,17 @@ export default function Packages() {
                   </li>
                 ))}
               </ul>
-
+                 <a href="https://orbisx.ca/app/booknow/VSS4D">
               <button
-                className={`w-full py-3 rounded-full transition-colors ${
+                className={`w-full py-3 rounded-full transition-colors cursor-pointer ${
                   pkg.popular || pkg.exclusive
                     ? "bg-white text-black hover:bg-gray-200"
                     : "bg-black text-white hover:bg-gray-800"
                 }`}
               >
-              <a href="https://orbisx.ca/app/booknow/VSS4D">  Select Package</a>
+             Select Package
               </button>
+              </a>
             </div>
           ))}
         </div>

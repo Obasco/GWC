@@ -36,7 +36,7 @@ const Navbar = () => {
         {/* CTA Button (RIGHT - Desktop) */}
         <div className="hidden md:block">
           <button className="bg-black text-white rounded-3xl px-6 py-2 hover:opacity-90 transition">
-            Book Now
+         <a href="https://orbisx.ca/app/booknow/VSS4D">Book Now</a>
           </button>
         </div>
 
@@ -65,7 +65,9 @@ const Navbar = () => {
               </li>
             ))}
             <button className="mt-4 bg-black text-white rounded-3xl px-6 py-2">
-              Book Now
+              <a href="https://orbisx.ca/app/booknow/VSS4D">
+                Book Now
+              </a>
             </button>
           </ul>
         </div>
@@ -73,5 +75,5 @@ const Navbar = () => {
     </nav>
   );
 };
-
+ 
 export default Navbar;

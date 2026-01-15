@@ -13,7 +13,7 @@ import Gallery from "./Layout/Gallery";
 import Contact from "./Layout/Contact";
 import { useEffect, useState } from "react";
 import Loader from "./Layout/Loader"
-
+import Verified from "./Layout/Verified";
 
 import { Routes , Route } from "react-router-dom";
 
@@ -46,6 +46,7 @@ const App = () => {
       <Route path="/about" element={<About />} />
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/verify" element={<Verified />} />
       </Routes>
     </>
   );
