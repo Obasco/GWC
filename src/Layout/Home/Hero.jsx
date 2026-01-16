@@ -28,7 +28,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/60" />
 
       {/* Content */}
-      <div className="relative z-20 h-full flex items-center">
+      <div className="relative z-20 h-full flex items-center mt-20">
         <div className="w-full max-w-7xl mx-auto px-6 md:px-10">
           <div className="max-w-2xl">
             <h1 className="poppins text-4xl sm:text-5xl xl:text-6xl font-semibold leading-tight text-white">

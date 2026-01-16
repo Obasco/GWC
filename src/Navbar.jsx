@@ -15,20 +15,20 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300  ${
         scrolled ? "bg-white shadow" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Brand */}
         <Link to="/" className="flex items-center gap-2">
-          <img src="/logo.png" alt="GrandWash logo" className="w-10 h-10" />
+          <img src="/logo.png" alt="GrandWash logo" className=""  width={100} height={100}/>
           <h2
             className={`text-2xl font-medium ${
               scrolled ? "text-black" : "text-white"
             }`}
           >
-            GrandWash
+            GRANDWASH SCARBOROUGH
           </h2>
         </Link>
 
