@@ -28,7 +28,7 @@ const Navbar = () => {
               scrolled ? "text-black" : "text-white"
             }`}
           >
-            GRANDWASH SCARBOROUGH
+            GRAND CARWASH SCARBOROUGH
           </h2>
         </Link>
 
