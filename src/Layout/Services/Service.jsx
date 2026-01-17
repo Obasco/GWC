@@ -1,7 +1,8 @@
 import { Check } from 'lucide-react';
 import Navbar from '../../Navbar';
 import Footer from '../Home/Footer';
-
+import Labo from "../../assets/labo.jpg"
+import SplitText from "../../component/SplitText";
 export default function service() {
   const services = [
     {
@@ -105,14 +106,23 @@ export default function service() {
         <section className="relative h-[60vh] flex items-center justify-center bg-black text-white">
         <div className="absolute inset-0 opacity-40">
           <img
-            src="https://images.unsplash.com/photo-1690049585211-fe8f5178fd0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbGVhbiUyMGx1eHVyeSUyMGNhcnxlbnwxfHx8fDE3NjgxNjcwNzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+          src={Labo}
+            // src="https://images.unsplash.com/photo-1690049585211-fe8f5178fd0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbGVhbiUyMGx1eHVyeSUyMGNhcnxlbnwxfHx8fDE3NjgxNjcwNzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
             alt="Clean luxury car"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover" 
           />
         </div>
         <div className="relative z-10 text-center px-4">
-          <h1 className="text-5xl md:text-7xl tracking-wider mb-4">Our Services</h1>
-          <p className="text-xl text-gray-300 tracking-wide">Attention to Detail, Priced Just Right</p>
+          <SplitText
+
+          text = "Our Service"
+          className="text-5xl md:text-7xl tracking-wider mb-4"
+           />
+           {/* <h1 className="text-5xl md:text-7xl tracking-wider mb-4">Our Services</h1> */}
+           <SplitText 
+            text = "Attention to Detail, Priced Just Right"
+            className="text-xl text-gray-300 tracking-wide"
+          />
         </div>
       </section>
 

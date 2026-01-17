@@ -9,7 +9,7 @@ const Hero = () => {
   const words = [
     "Keep Your Car Looking Brand-New",
     "Experience the Ultimate Clean",
-    "Drive in Style with GrandWash",
+    "Drive in Style with Grand CarWash",
     "Your Car Deserves the Best Care",
   ];
   return (

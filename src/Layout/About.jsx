@@ -2,6 +2,9 @@ import React from "react";
 import Navbar from "../Navbar";
 import Footer from "./Home/Footer";
 import { Flag, MapPin, Users, Leaf, Star } from "lucide-react";
+import Labo from "../assets/labo.jpg"
+import SplitText from "../component/SplitText";
+import CountUp from "../components/CountUp";
 
 const testimonials = [
   {
@@ -36,13 +39,18 @@ const About = () => {
       <section className="relative h-[60vh] flex items-center justify-center bg-black text-white">
         <div className="absolute inset-0 opacity-40">
           <img
-            src="https://images.unsplash.com/photo-1690049585211-fe8f5178fd0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbGVhbiUyMGx1eHVyeSUyMGNhcnxlbnwxfHx8fDE3NjgxNjcwNzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+          src={Labo}
+            //src="https://images.unsplash.com/photo-1690049585211-fe8f5178fd0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbGVhbiUyMGx1eHVyeSUyMGNhcnxlbnwxfHx8fDE3NjgxNjcwNzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
             alt="Clean luxury car"
             className="w-full h-full object-cover"
           />
         </div>
         <div className="relative z-10 text-center px-4">
-          <h1 className="text-5xl md:text-7xl tracking-wider mb-4">About Us</h1>
+          <SplitText
+          text = "About Us"
+          className="text-5xl md:text-7xl tracking-wider mb-4"
+           />
+          {/* <h1 >About Us</h1> */}
         </div>
       </section>
 
@@ -97,7 +105,9 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-8 mt-16">
             <div className="border-2 border-black p-8 rounded-2xl">
               <Flag className="mx-auto mb-4" size={40} />
-              <div className="text-5xl mb-2">2010</div>
+              <div className="text-5xl mb-2">
+                <CountUp from={1000} direction="up" to={2010} suffix="+" duration={2} />
+              </div>
               <p className="text-gray-600">Established</p>
             </div>
             <div className="border-2 border-black p-8 rounded-2xl">
@@ -107,7 +117,9 @@ const About = () => {
             </div>
             <div className="border-2 border-black p-8 rounded-2xl">
               <Users className="mx-auto mb-4" size={40} />
-              <div className="text-5xl mb-2">30K+</div>
+              <div className="text-5xl mb-2">
+                <CountUp from={0} direction="up" to={30000} suffix="+" duration={2} />
+              </div>
               <p className="text-gray-600">Satisfied Customers</p>
             </div>
             <div className="border-2 border-black p-8 rounded-2xl">
