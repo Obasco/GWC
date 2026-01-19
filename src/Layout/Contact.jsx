@@ -3,7 +3,9 @@ import Navbar from "../Navbar";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import Footer from "./Home/Footer";
 import { useNavigate } from "react-router-dom";
-
+import VidModal from "./vidmodal";
+import SplitText from "../component/SplitText";
+import Labo from "../assets/labo.jpg"
 const Contact = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -39,6 +41,27 @@ const Contact = () => {
     <>
       <Navbar />
 
+
+
+
+            <section className="relative h-screen flex items-center justify-center bg-black text-white">
+        <div className="absolute inset-0 opacity-40">
+          <img
+            src={Labo}
+            //src="https://images.unsplash.com/photo-1690049585211-fe8f5178fd0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbGVhbiUyMGx1eHVyeSUyMGNhcnxlbnwxfHx8fDE3NjgxNjcwNzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+            alt="Clean luxury car"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="relative z-10 text-center px-4">
+          <SplitText
+            text="Contact Us"
+            className="text-5xl md:text-7xl tracking-wider mb-4"
+          />
+          {/* <h1 >About Us</h1> */}
+        </div>
+      </section>
+
       <section className="max-w-7xl mx-auto px-4 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
           {/* CONTACT INFO */}
@@ -63,13 +86,22 @@ const Contact = () => {
               })}
             </div>
 
-            <iframe
-              className="w-full h-72 mt-8 rounded-xl"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.021965471286!2d-79.2272585!3d43.7575037"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+            <div className="w-full h-64 rounded-2xl overflow-hidden border border-gray-200 mt-4 mb-4">
+              <iframe
+                title="Grand Car Wash Toronto Map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2883.504816337517!2d-79.2308759!3d43.7661321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4ce71499c579b%3A0x2d3dd2b5faba152e!2sGrand%20Car%20Wash!5e0!3m2!1sen!2sca!4v1705600000000"
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+
+            <VidModal  />
           </div>
+     
 
           {/* FORM */}
           <div className="bg-black rounded-2xl shadow-lg p-8 text-white">

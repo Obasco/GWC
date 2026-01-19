@@ -128,15 +128,15 @@ export default function service() {
 
 
       {/* Packages */}
-        <section className="py-24 px-4">
+        <section className="py-24 px-4 overflow-x-hidden">
         <div className="max-w-7xl mx-auto space-y-32">
           {services.map((service, index) => (
             <div
               key={service.name}
               className={`grid md:grid-cols-2 gap-12 items-center ${
                 index % 2 === 1 ? 'md:flex-row-reverse' : ''
-              }`}
-            >
+              }`} 
+          data-aos ="fade-left"  >
               <div className={index % 2 === 1 ? 'md:order-2' : ''}>
                 <div className="relative h-96 bg-black">
                   <img
@@ -146,7 +146,7 @@ export default function service() {
                   />
                 </div>
               </div>
-              <div className={index % 2 === 1 ? 'md:order-1' : ''}>
+              <div className={index % 2 === 1 ? 'md:order-1' : ''} data-aos="fade-right ">
                 <div className="text-sm tracking-widest text-gray-500 mb-2">
                   {service.category}
                 </div>
@@ -191,7 +191,7 @@ export default function service() {
           <h2 className="text-4xl mb-12 tracking-wide text-center">
             SINGLE SERVICES
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-6" data-aos="fade-up">
             {addons.map((addon) => (
               <div
                 key={addon.name}

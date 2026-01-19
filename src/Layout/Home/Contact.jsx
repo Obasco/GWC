@@ -1,8 +1,9 @@
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import VideoDirectionsModal from "../vidmodal";
 
 export function Contact() {
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-white overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -13,7 +14,8 @@ export function Contact() {
             Visit Us or Book Your Package
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Stop by our Toronto location or schedule an appointment online for your preferred detailing package.
+            Stop by our Toronto location or schedule an appointment online for
+            your preferred detailing package.
           </p>
         </div>
 
@@ -51,7 +53,10 @@ export function Contact() {
                   <div>
                     <div className="font-semibold mb-1">Email</div>
                     <div className="text-gray-300">
-                      <a href="mailto:info@grandcarwash.ca" className="hover:underline">
+                      <a
+                        href="mailto:info@grandcarwash.ca"
+                        className="hover:underline"
+                      >
                         info@grandcarwash.ca
                       </a>
                     </div>
@@ -74,12 +79,19 @@ export function Contact() {
             <div className="w-full h-64 rounded-2xl overflow-hidden border border-gray-200">
               <iframe
                 title="Grand Car Wash Toronto Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.021965471286!2d-79.2272585!3d43.7575037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d03f880d4a63%3A0x75fc19d7e3e02c61!2s4%20Markham%20Rd%20%23780%2C%20Scarborough%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sus!4v1705072290000!5m2!1sen!2sus"
-                className="w-full h-full"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2883.504816337517!2d-79.2308759!3d43.7661321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4ce71499c579b%3A0x2d3dd2b5faba152e!2sGrand%20Car%20Wash!5e0!3m2!1sen!2sca!4v1705600000000"
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+              />
+            </div>
+
+            {/* Video Directions Button */}
+            <div className="mt-6 flex justify-center">
+              <VideoDirectionsModal />
             </div>
           </div>
 

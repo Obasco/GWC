@@ -31,8 +31,8 @@ export function AboutH() {
     <section id="about" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* About Text */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-          <div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20 overflow-x-hidden">
+          <div data-aos="fade-right">
             <div className="inline-block bg-black text-white px-4 py-2 rounded-full mb-4">
               About Us
             </div>
@@ -48,7 +48,7 @@ export function AboutH() {
               <Link to="/about">Learn More</Link>
             </button>
           </div>
-          <div>
+          <div data-aos="fade-left">
             {/* Optional Image */}
             <img
               src={car2} 
@@ -63,7 +63,7 @@ export function AboutH() {
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
-              <div key={index} className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-shadow group border border-gray-200 text-center">
+              <div key={index} className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-shadow group border border-gray-200 text-center" data-aos="fade-up">
                 <div className="w-16 h-16 bg-black text-white rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
                   <Icon className="w-8 h-8" />
                 </div>

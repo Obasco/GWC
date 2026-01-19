@@ -33,19 +33,20 @@ const services = [
   },
 ];
 
+
 export default function Services() {
   return (
-    <section id="services" className="py-20 bg-gray-50">
+    <section id="services" className="py-20 bg-gray-50 overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-block bg-black text-white px-4 py-2 rounded-full mb-4">
+          <div className="inline-block bg-black text-white px-4 py-2 rounded-full mb-4" data-aos = "fade-down">
             Our Services
           </div>
-          <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl text-gray-900 mb-4" data-aos = "fade-left">
             Complete Car Care Solutions
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto" data-aos="fade-right">
             From quick washes to full detailing, we offer a range of services to keep your vehicle looking its best.
           </p>
         </div>
@@ -58,6 +59,7 @@ export default function Services() {
               <div
                 key={index}
                 className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow group border border-gray-200"
+              data-aos="fade-up"
               >
                 <div className="w-16 h-16 bg-black text-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Icon className="w-8 h-8" />

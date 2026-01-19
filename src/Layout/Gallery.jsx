@@ -2,6 +2,9 @@ import React from "react";
 import Masonry from "../component/Masonry";
 import Navbar from "../Navbar";
 import Footer from "./Home/Footer";
+import GalleryCarousel from "../GalleryCarousel.jsx";
+import Labo from "../assets/labo.jpg";
+import Labo2 from "../assets/labo2.jpg"
 
 
 const Gallery = () => {
@@ -13,11 +16,6 @@ const Gallery = () => {
       id: 1,
       img: "https://i.pinimg.com/736x/11/f0/47/11f047723da32d7cd10701deeffa9de7.jpg",
       height: 700,
-    },
-    {
-      id: 2,
-      img: "https://i.pinimg.com/736x/df/41/4b/df414b96b3b1373dd46b6923274132f3.jpg",
-      height: 680,
     },
     {
       id: 3,
@@ -135,14 +133,65 @@ const Gallery = () => {
       height: 610,
     },
   ];
+
+
+  const slideimg =[
+    {
+      id : 1,
+      img : Labo,
+      height :500
+    },
+
+    {
+      id : 2,
+      img : Labo2,
+      height : 500,
+    },
+
+     {
+      id: 3,
+      img: "https://i.pinimg.com/736x/11/f0/47/11f047723da32d7cd10701deeffa9de7.jpg",
+      height: 700,
+    },
+    {
+      id: 4,
+      img: "https://i.pinimg.com/1200x/16/e4/d7/16e4d726f228e7e2c5cbd11655f9d094.jpg",
+      height: 460,
+    },
+    {
+      id: 5,
+      img: "https://i.pinimg.com/736x/01/2f/46/012f46a4d523087bc09bbdcf1c7cdc8e.jpg",
+      height: 740,
+    },
+  ]
   return (
     <>
-      <section className="mt-4 min-h-screen px-4 md:px-8 lg:px-16">
+    
         <Navbar className="mb-40" />
-
-        <h2 className="text-4xl font-semibold text-center mb-12 mt-8">Gallery
-         <span className="block h-1 w-24 bg-black mx-auto mt-2 mb-16"></span>
+              <section className="relative h-[60vh] flex items-center justify-center bg-black text-white">
+        <div className="absolute inset-0 opacity-40">
+          <img
+          src={Labo}
+            // src="https://images.unsplash.com/photo-1690049585211-fe8f5178fd0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbGVhbiUyMGx1eHVyeSUyMGNhcnxlbnwxfHx8fDE3NjgxNjcwNzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+            alt="Clean luxury car"
+            className="w-full h-full object-cover" 
+          />
+        </div>
+        <div className="relative z-10 text-center px-4">
+            <h2 className="text-4xl font-semibold text-center mb-12 mt-8">Gallery
+         <span className="block h-1 w-24 bg-white mx-auto mt-2 mb-16"></span>
         </h2>
+        </div>
+      </section>
+
+
+
+
+    <section className="mt-4 min-h-screen px-4 md:px-8 lg:px-16">
+
+        <GalleryCarousel images={slideimg} />
+
+       
 
         <Masonry items={images} className="mt-19" />
         <br />

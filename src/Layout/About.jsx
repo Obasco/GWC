@@ -2,31 +2,37 @@ import React from "react";
 import Navbar from "../Navbar";
 import Footer from "./Home/Footer";
 import { Flag, MapPin, Users, Leaf, Star } from "lucide-react";
-import Labo from "../assets/labo.jpg"
+import Labo from "../assets/labo.jpg";
 import SplitText from "../component/SplitText";
 import CountUp from "../components/CountUp";
+import AOS from "aos";
+import BlurText from "../component/BlurText";
+import review from "../assets/reviewico.png";
+import review2 from "../assets/reviewicon.png";
+import review3 from "../assets/review.png";
+import "aos/dist/aos.css";
 
 const testimonials = [
   {
-    name: "Sarah T.",
+    name: "Arsalan Farooq",
     role: "Scarborough, ON",
     review:
-      "They did an incredible job on my SUV. Interior and exterior were spotless. Highly recommend!",
-    avatar: "https://randomuser.me/api/portraits/women/65.jpg",
+      "What a great experience! I dropped my car off at the appointment time and it was ready in the allocated time. They did an amazing job cleaning my car both inside and exterior. Every surface was properly cleaned, especially exterior as they were able to buff and polish out my scratches! Highly recommend as it’s a friendly place.",
+    avatar: review,
   },
   {
-    name: "Mike L.",
+    name: "Rifky Saburdeen",
     role: "Toronto, ON",
     review:
-      "Fast, professional, and worth every dollar. My car looks brand new every time I come here.",
-    avatar: "https://randomuser.me/api/portraits/men/42.jpg",
+      "I had a full interior cleaning done on my vehicle, and the team put in a great effort to make sure everything was thoroughly cleaned and detailed to the best of their ability.",
+    avatar: review2,
   },
   {
-    name: "Emily R.",
+    name: "Nick Kossovan",
     role: "Markham, ON",
     review:
-      "Attention to detail is unmatched. You can tell they actually care about the work.",
-    avatar: "https://randomuser.me/api/portraits/women/22.jpg",
+      "If you want to experience service beyond your wildest expectation then have your car detailed at Grand Car Wash. Not only is the service and work outstanding, their prices are more than reasonable. Have you next car detailing done at Grand Car Wash and see for yourself what I'm raving about!",
+    avatar: review3,
   },
 ];
 
@@ -36,10 +42,10 @@ const About = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative h-[60vh] flex items-center justify-center bg-black text-white">
+      <section className="relative h-screen flex items-center justify-center bg-black text-white">
         <div className="absolute inset-0 opacity-40">
           <img
-          src={Labo}
+            src={Labo}
             //src="https://images.unsplash.com/photo-1690049585211-fe8f5178fd0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbGVhbiUyMGx1eHVyeSUyMGNhcnxlbnwxfHx8fDE3NjgxNjcwNzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
             alt="Clean luxury car"
             className="w-full h-full object-cover"
@@ -47,30 +53,33 @@ const About = () => {
         </div>
         <div className="relative z-10 text-center px-4">
           <SplitText
-          text = "About Us"
-          className="text-5xl md:text-7xl tracking-wider mb-4"
-           />
+            text="About Us"
+            className="text-5xl md:text-7xl tracking-wider mb-4"
+          />
           {/* <h1 >About Us</h1> */}
         </div>
       </section>
 
       {/* Our Story */}
-      <section className="py-24 px-4">
+      <section className="py-24 px-4 overflow-hidden">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-          <div>
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            className="overflow-hidden"
+          >
             <h2 className="text-4xl mb-8 tracking-wide">Our Story</h2>
             <p className="text-gray-700 leading-relaxed mb-6">
               Grand Car Wash was built on one simple belief — every vehicle
-              deserves professional care and attention to detail. Located in
-              the heart of Scarborough, we’ve proudly served our community
-              with reliable, high-quality car wash and detailing services for
-              years.
+              deserves professional care and attention to detail. Located in the
+              heart of Scarborough, we’ve proudly served our community with
+              reliable, high-quality car wash and detailing services for years.
             </p>
             <p className="text-gray-700 leading-relaxed mb-6">
               What started as a local car wash quickly became a trusted
-              destination for drivers who value craftsmanship, consistency,
-              and honest pricing. From daily drivers to luxury vehicles, we
-              treat every car as if it were our own.
+              destination for drivers who value craftsmanship, consistency, and
+              honest pricing. From daily drivers to luxury vehicles, we treat
+              every car as if it were our own.
             </p>
             <p className="text-gray-700 leading-relaxed">
               Our experienced team uses professional-grade equipment, premium
@@ -80,7 +89,11 @@ const About = () => {
               standard.
             </p>
           </div>
-          <div className="relative h-96">
+          <div
+            className="relative h-96"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
             <img
               src="https://images.unsplash.com/photo-1605437241278-c1806d14a4d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXIlMjBkZXRhaWxpbmd8ZW58MXx8fHwxNzY4MTY3MDc0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
               alt="Car detailing"
@@ -93,20 +106,32 @@ const About = () => {
       {/* Mission */}
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl mb-8 tracking-wide">Our Mission</h2>
+          <h2 className="text-4xl mb-8 tracking-wide" data-aos="fade-right">
+            Our Mission
+          </h2>
           <p className="text-xl text-gray-700 leading-relaxed mb-8">
+            <BlurText
+              text="
             At Grand Car Wash, our mission is simple — to deliver reliable,
             high-quality car wash and detailing services with honesty,
             consistency, and attention to detail. We aim to exceed
             expectations every visit while providing fair pricing and
             professional care for every vehicle.
+           "
+            />
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 mt-16">
             <div className="border-2 border-black p-8 rounded-2xl">
               <Flag className="mx-auto mb-4" size={40} />
               <div className="text-5xl mb-2">
-                <CountUp from={1000} direction="up" to={2010} suffix="+" duration={2} />
+                <CountUp
+                  from={1000}
+                  direction="up"
+                  to={2010}
+                  suffix="+"
+                  duration={2}
+                />
               </div>
               <p className="text-gray-600">Established</p>
             </div>
@@ -118,7 +143,13 @@ const About = () => {
             <div className="border-2 border-black p-8 rounded-2xl">
               <Users className="mx-auto mb-4" size={40} />
               <div className="text-5xl mb-2">
-                <CountUp from={0} direction="up" to={30000} suffix="+" duration={2} />
+                <CountUp
+                  from={0}
+                  direction="up"
+                  to={30000}
+                  suffix="+"
+                  duration={2}
+                />
               </div>
               <p className="text-gray-600">Satisfied Customers</p>
             </div>
@@ -132,31 +163,32 @@ const About = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="relative bg-linear-to-b from-white to-gray-100 py-32 overflow-hidden">
+      <section className="relative bg-linear-to-b from-white to-gray-100 py-32 ">
         <div className="absolute top-10 left-10 w-72 h-72 bg-black blur-3xl opacity-[0.04]" />
         <div className="absolute bottom-10 right-10 w-72 h-72 bg-black blur-3xl opacity-[0.04]" />
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 bg-black/5 px-4 py-2 rounded-full border border-black/10 mb-6">
+          <div className="text-center mb-20" >
+            <div className="inline-flex items-center gap-2 bg-black/5 px-4 py-2 rounded-full border border-black/10 mb-6" data-aos="fade-down"> 
               <span className="w-2 h-2 bg-black rounded-full animate-pulse" />
               <span className="text-sm font-semibold tracking-wide">
                 CUSTOMER REVIEWS
               </span>
             </div>
 
-            <h2 className="text-5xl md:text-6xl font-bold text-black mb-6">
+            <h2 className="text-5xl md:text-6xl font-bold text-black mb-6" data-aos="fade-right">
               What Our{" "}
               <span className="bg-linear-to-r from-black to-gray-600 bg-clip-text text-transparent">
                 Customers Say
               </span>
             </h2>
 
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Honest feedback from customers who trust Grand Car Wash with their vehicles.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-left">
+              Honest feedback from customers who trust Grand Car Wash with their
+              vehicles.
             </p>
 
-            <div className="w-16 h-1 bg-black mx-auto mt-8 rounded-full" />
+            <div className="w-16 h-1 bg-black mx-auto mt-8 rounded-full"  data-aos="fade-left"/>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -164,7 +196,7 @@ const About = () => {
               <div
                 key={index}
                 className="group relative bg-white p-8 rounded-2xl border border-black/10 shadow-sm hover:shadow-xl transition-all duration-500"
-              >
+               data-aos="fade-down">
                 <div className="absolute inset-0 bg-black/3opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
 
                 <div className="relative z-10">
@@ -174,7 +206,9 @@ const About = () => {
                     ))}
                   </div>
 
-                  <p className="text-black italic leading-relaxed mb-6">“{item.review}”</p>
+                  <p className="text-black italic leading-relaxed mb-6">
+                    “{item.review}”
+                  </p>
 
                   <div className="h-px w-full bg-black/10 mb-6" />
 
@@ -202,4 +236,3 @@ const About = () => {
 };
 
 export default About;
-    

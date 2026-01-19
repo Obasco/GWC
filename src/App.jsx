@@ -16,17 +16,19 @@ import Loader from "./Layout/Loader"
 import Verified from "./Layout/Verified";
 
 import { Routes , Route } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const App = () => {
 
-
+AOS.init();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // simulate page load / data fetch
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 4500); // adjust time or remove if using real data
+    }, 3000); // adjust time or remove if using real data
 
     return () => clearTimeout(timer);
   }, []);
