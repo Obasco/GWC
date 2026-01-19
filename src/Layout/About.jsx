@@ -167,7 +167,7 @@ const About = () => {
         <div className="absolute top-10 left-10 w-72 h-72 bg-black blur-3xl opacity-[0.04]" />
         <div className="absolute bottom-10 right-10 w-72 h-72 bg-black blur-3xl opacity-[0.04]" />
 
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="max-w-7xl mx-auto px-6 relative z-10 overflow-x-hidden">
           <div className="text-center mb-20" >
             <div className="inline-flex items-center gap-2 bg-black/5 px-4 py-2 rounded-full border border-black/10 mb-6" data-aos="fade-down"> 
               <span className="w-2 h-2 bg-black rounded-full animate-pulse" />
